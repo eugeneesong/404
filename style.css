@@ -1,34 +1,110 @@
-.button-62 {
-  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
-  border: 0;
-  border-radius: 12px;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 0 1rem;
+body {
+  margin-top: 300px;
+  margin-left: 500px;
+  font-family: Montserrat;
+  font-size: 40px;
+  color: var(--white);
+  letter-spacing: 0.7em;
+  background-color: black;
+}
+
+.button-39 {
+  background-color: #ffffff;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.75rem 1rem;
   text-align: center;
-  text-decoration: none;
-  transition: box-shadow 0.2s ease-in-out;
+  text-decoration: none #d1d5db solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  white-space: nowrap;
 }
 
-.button-62:not([disabled]):focus {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
-    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
-    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+.button-39:hover {
+  background-color: rgb(249, 250, 251);
 }
 
-.button-62:not([disabled]):hover {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
-    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
-    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+.button-39:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+  box-shadow: none;
+}
+
+/* flicker */
+body {
+  background: #000;
+  padding: 2rem;
+}
+
+h2 {
+  font-family: "Arial";
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 0.75;
+}
+
+span {
+  display: block;
+}
+
+span:not(.light) {
+  opacity: 0;
+  -webkit-animation: flashText 0.5s ease-out alternate infinite;
+  animation: flashText 0.5s ease-out alternate infinite;
+}
+
+span.light {
+  position: relative;
+  display: inline-block;
+}
+span.light:before {
+  position: absolute;
+  left: 0;
+  top: -10%;
+  width: 100%;
+  height: 120%;
+  background: #fff;
+  filter: blur(10px);
+  content: "";
+  opacity: 0;
+  -webkit-animation: flash 0.5s ease-out alternate infinite;
+  animation: flash 0.5s ease-out alternate infinite;
+}
+
+@-webkit-keyframes flash {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
+}
+@keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
 }
