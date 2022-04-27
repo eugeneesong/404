@@ -309,6 +309,11 @@ a {
   align-items: center;
 }
 
+.hero-image:hover {
+  box-shadow: -15px 15px 20px rgba(102, 102, 102, 0.3);
+  transition: 0.5s ease-in-out;
+}
+
 .hero-image {
   overflow: visible;
   margin-top: 40px;
@@ -1159,8 +1164,8 @@ a {
   transition: 0.5s ease;
 }
 
-#onH:hover + .paragraph-2 {
-  /* visibility: visible; */
+/* #onH:hover + .paragraph-2 {
+  visibility: visible;
 }
 
 .hover-point:hover ~ .paragraph-2 {
@@ -1168,7 +1173,7 @@ a {
   transition: opacity 0.55s ease-in-out;
   -moz-transition: opacity 0.55s ease-in-out;
   -webkit-transition: opacity 0.55s ease-in-out;
-}
+} */
 
 .hover-point {
   position: absolute;
