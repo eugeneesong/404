@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div class="navbar">
-      <a href="#home">HOME</a>
-      <a href="#news">ABOUT THE ARTIST</a>
-      <a href="#contact">ABOUT THE EXHIBITION</a>
+    <div class="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
     </div>
-
     <div id="container">
       <div id="container2">
-        <div class="box one">
+        <!-- <div class="box one">
           <div>WOMEN TO WATCH 2020</div>
-          <!-- <div>PAPER ROUTES</div> -->
         </div>
         <div class="box one">
-          <!-- <div>WOMEN TO WATCH 2020</div> -->
           <div>PAPER ROUTES</div>
+        </div> -->
+        <div id="container">
+          <div class="navbar">
+            <a href="#home">HOME   </a>
+            <a href="#news">ABOUT THE ARTIST   </a>
+            <a href="#contact">ABOUT THE EXHIBITION</a>
+          </div>
         </div>
         <div class="box two">
+          <div class="navbar">
+            <a href="#home">HOME</a>
+            <a href="#news">ABOUT THE ARTIST</a>
+            <a href="#contact">ABOUT THE EXHIBITION</a>
+          </div>
           <div>
-            <!-- hello -->
-            <!-- <img src="fuko.png" alt="Flowers in Chania" /> -->
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
@@ -97,5 +104,20 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      function myFunction() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+    </script>
   </body>
 </html>
